@@ -12,11 +12,13 @@ function App() {
   // JSX 중괄호 문법 사용
   // 한 곳에다가 여러가지 자료를 저장하고 싶을 때 Array[ ]
   let [title, setTitle] = useState(["DW아카데미 503호", "DW아카데미 502호", "DW아카데미 501호"]); 
+  let [bgColor, setbgColor] = useState('');
+  
 
-  return <div className="App">
+  return <div className="App" style={{backgroundColor : bgColor?"red":""} }>
     <h1>Hello! {user}!</h1>
   <p>This is a React App</p>
-
+  
   <div>
     <p>클릭시 + {count}</p>
     <button onClick={()=>{
@@ -33,6 +35,7 @@ function App() {
     }}>Click Me</button> */}
     
     <p>안녕하세요. 저는 여상현입니다.</p>
+    
   </div>
 
   <div className="list">
@@ -60,6 +63,11 @@ function App() {
     copy1 = copy1.sort();
     setTitle(copy1);
   }}>글 정렬</button>
+
+  <button onClick={()=>{
+    setbgColor(!bgColor);
+  }}>배경색바꾸기
+  </button>
   </div>
 }
 
