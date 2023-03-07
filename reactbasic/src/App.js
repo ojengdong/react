@@ -5,6 +5,7 @@ import State from './component/State'
 import {useState} from 'react'
 import Box from './component/Box'
 import Comment from './component/Comment'
+import CommentList from './component/CommentList'
 
 
 function App() {
@@ -54,7 +55,6 @@ function App() {
   // let num1 = [1,2,3,4];
   // let name = ['짱구', '맹구', '철수', ' 훈이']
 
-  let name = ['']
   return (  
     // <div className='App'>
     //     {/* <Box num="1" name="짱구"/>
@@ -72,7 +72,7 @@ function App() {
     //   })
     // }  
     // </div>
-    <Comment />
+    <CommentList />
   );
 }
 

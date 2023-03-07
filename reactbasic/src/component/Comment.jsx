@@ -1,7 +1,68 @@
 import React from 'react';
 import {useState} from 'react';
-import './Comment.css';
+// import './Comment.css';
 import img from '../component/ddd.jpg'
+
+// const styles = {
+//    display : 'flex',
+//    margin : '8px',
+//    padding : '8px',
+//    border: '1px solid #ccc',
+//    borderRadius : '16px'
+// }
+
+// const styles1 = {
+//     width : '50px',
+//     height : '50px',
+//     borderRadius : '50%'
+// }
+// const styles2 = {
+//     display : 'flex',
+//     flexDirection : 'column',
+//     justifyContent : 'center',
+//     marginLeft : '8px'
+// }
+
+// const styles3 = {
+//     fontSize : '18px',
+//     fontWeight : 'bold'
+// }
+
+// const styles4 = {
+//     fontSize : '14px'
+// }
+
+const styles = {
+    wrapper : {
+        display : 'flex',
+        margin : '8px',
+        padding : '8px',
+        border : '1px solid #ccc',
+        borderRadius : '16px'
+    },
+
+    image : {
+        width : '50px',
+        height : '50px',
+        borderRadius : '50%'
+    },
+
+    contentContainer : {
+        display : 'flex', 
+        flexDirection : 'column',
+        justifyContent : 'center',
+        marginLeft : '8px'
+    },
+
+    nameText  :{
+        fontSize : '18px',
+        fontWeight : 'bold'
+    }, 
+    commenText : {
+        fontSize : '14px'
+    },
+
+}
 
 // const Comment = (props) => {
 //     return(
@@ -27,16 +88,25 @@ import img from '../component/ddd.jpg'
 
 function Comment(props) {
     return (
-        <div className='wrapper'>
+        <div className='wrapper' style={styles.wrapper}>
             <div className='img-box'>
-                <img src={img} alt="" />
+                <img src={img} alt="" style={styles.image}/>
             </div>
 
-            <div className='content-container'>
-                <span className='name-text'>{props.name}</span>
-                <span className='comment-text'>{props.comment}</span>
+            <div className='content-container' style={styles.contentContainer}>
+                <span className='name-text' style={styles.nameText}>{props.name}</span>
+                <span className='comment-text' style={styles.commenText}>{props.comment}</span>
             </div>
+            <button onClick={()=> {
+                
+                
+            }}>X</button>
+            
         </div>
+        
     )
+    
 }
-export default Comment
+
+
+export default Comment;
