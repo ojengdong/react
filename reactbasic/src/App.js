@@ -4,6 +4,8 @@ import './App.css';
 import State from './component/State'
 import {useState} from 'react'
 import Box from './component/Box'
+import Comment from './component/Comment'
+
 
 function App() {
   // State라는거에 반응하기 때문에 react
@@ -11,7 +13,7 @@ function App() {
   // State가 변경 되었을 때만 UI를 재렌더링 한다.
 
   let num = 0;
-
+      
   // useState
   // 1. import {useState} from 'react'
   // state를 사용하기 위해서 react에서 useState를 데려온다.
@@ -49,29 +51,29 @@ function App() {
   // State 주의할 점 
 
   // State는 기존 값을 잃어버리지 않고 기억하고 있다.
-  let num1 = [1,2,3,4];
-  let name = ['짱구', '맹구', '철수', ' 훈이']
+  // let num1 = [1,2,3,4];
+  // let name = ['짱구', '맹구', '철수', ' 훈이']
 
+  let name = ['']
   return (  
-    <div className='App'>
-        {/* <Box num="1" name="짱구"/>
-        <Box num="2" name="철수"/>
-        <Box num="3" name="유리"/>
-        <Box num="4" name="맹구"/> */}
-      {
-      name.map(function(a,i){
-        return (
-          <div className='box' key={i}>
-        <h1>Box{num1[i]}</h1>
-        <h2>{name[i]}</h2>
-    </div>
-        )
-      })
-    }  
-    </div>
-    
+    // <div className='App'>
+    //     {/* <Box num="1" name="짱구"/>
+    //     <Box num="2" name="철수"/>
+    //     <Box num="3" name="유리"/>
+    //     <Box num="4" name="맹구"/> */}
+    //   {
+    //   name.map(function(a,i){
+    //     return (
+    //       <div className='list' key={i}>
+    //     <h1>Box{num1[i]}</h1>
+    //     <h2>{name[i]}</h2>
+    // </div>
+    //     )
+    //   })
+    // }  
+    // </div>
+    <Comment />
   );
-    
 }
 
 export default App;
