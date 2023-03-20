@@ -61,6 +61,7 @@ const styles = {
     commenText : {
         fontSize : '14px'
     },
+    
 
 }
 
@@ -96,11 +97,10 @@ function Comment(props) {
             <div className='content-container' style={styles.contentContainer}>
                 <span className='name-text' style={styles.nameText}>{props.name}</span>
                 <span className='comment-text' style={styles.commenText}>{props.comment}</span>
+                
             </div>
-            <button onClick={()=> {
-                
-                
-            }}>X</button>
+            <button onClick={props.onDelete}>X</button>
+            {/* <button onClick={props.onCreate}>글추가</button> */}
             
         </div>
         
