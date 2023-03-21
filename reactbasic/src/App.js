@@ -6,6 +6,7 @@ import {useState} from 'react'
 import Box from './component/Box'
 import Comment from './component/Comment'
 import CommentList from './component/CommentList'
+import back from './img1.jpg'
 
 
 function App() {
@@ -56,6 +57,21 @@ function App() {
   // let name = ['짱구', '맹구', '철수', ' 훈이']
 
   return (  
+    <div className='App'>
+      {/* <div style={{backgroundImage : `url(${back})`, height : '500px', backgroundRepeat: 'no-repeat'}}></div> */}
+      {/* <div style={{backgroundImage : 'url(' + back + ')', height : '500px', backgroundRepeat: 'no-repeat'}}></div> */}
+      {/* <img src={process.env.PUBLIC_URL + 'img2.jpg'} /> */}
+      {/* <div style={{
+        backgroundImage : 
+        'url(https://w7.pngwing.com/pngs/402/653/png-transparent-ball-pocket-pocket-monster-poke-poke-ball-set-icon-thumbnail.png)',
+         height: '500px',
+         backgroundRepeat: 'no-repeat'
+         }}
+         ></div> */}
+         
+
+      <CommentList />
+    </div>
     // <div className='App'>
     //     {/* <Box num="1" name="짱구"/>
     //     <Box num="2" name="철수"/>
@@ -71,8 +87,10 @@ function App() {
     //     )
     //   })
     // }  
+    
     // </div>
-    <CommentList />
+    
+    
   );
 }
 

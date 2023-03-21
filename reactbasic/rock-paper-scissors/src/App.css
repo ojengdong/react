@@ -37,11 +37,11 @@
     margin-right: 0;
 }
 
-.WIN {
+.win {
     border: 5px solid green;
 }
 
-.LOSE {
+.lose {
     border: 5px solid red;
 }
 
